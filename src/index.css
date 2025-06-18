@@ -1,0 +1,386 @@
+/* Базовые настройки */
+:root {
+  --font-size-multiplier: 1;
+  --line-height-multiplier: 1;
+  --letter-spacing-multiplier: 1px;
+  --font-family: inherit;
+}
+
+/* Применение базовых настроек */
+html {
+  font-size: calc(16px * var(--font-size-multiplier));
+}
+
+body {
+  margin: 0;
+  font-size: calc(16px * var(--font-size-multiplier)) !important;
+  line-height: calc(1.5 * var(--line-height-multiplier)) !important;
+  letter-spacing: var(--letter-spacing-multiplier) !important;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+/* Применение размера шрифта ко всем элементам */
+* {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p, span, div, button, input, select, textarea, label {
+  font-size: 1rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Стили для контейнера */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили для карточек товаров */
+.product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-content {
+  flex-grow: 1;
+}
+
+/* Стили для изображений товаров */
+.product-image {
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Стили для кнопок */
+.button {
+  margin: 8px;
+}
+
+/* Стили для форм */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили для сообщений об ошибках */
+.error-message {
+  color: #d32f2f;
+  margin: 8px 0;
+}
+
+/* Стили для сообщений об успехе */
+.success-message {
+  color: #2e7d32;
+  margin: 8px 0;
+}
+
+/* Стили для навигационной панели */
+.navbar {
+  margin-bottom: 20px;
+}
+
+/* Стили для корзины */
+.cart-item {
+  margin-bottom: 16px;
+}
+
+/* Стили для профиля */
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили для админ-панели */
+.admin-container {
+  padding: 20px;
+}
+
+/* Стили для загрузки */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Высокая контрастность */
+.high-contrast {
+  background-color: #ffffff !important;
+}
+
+.high-contrast * {
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.high-contrast .MuiAppBar-root {
+  background-color: #ffffff !important;
+  border-bottom: 2px solid #000000 !important;
+}
+
+.high-contrast .MuiAppBar-root * {
+  color: #000000 !important;
+}
+
+.high-contrast .MuiToolbar-root {
+  background-color: #ffffff !important;
+}
+
+.high-contrast .MuiButton-root {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+.high-contrast .MuiButton-root:hover {
+  background-color: #f0f0f0 !important;
+  color: #000000 !important;
+}
+
+.high-contrast .MuiIconButton-root {
+  color: #000000 !important;
+  background-color: transparent !important;
+}
+
+.high-contrast .MuiIconButton-root:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.high-contrast .MuiBadge-badge {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .MuiTypography-root {
+  color: #000000 !important;
+}
+
+.high-contrast .MuiTypography-root:hover {
+  color: #000000 !important;
+}
+
+.high-contrast .MuiSvgIcon-root {
+  color: #000000 !important;
+}
+
+/* Цветовые схемы */
+.color-scheme-blue-yellow {
+  --primary-color: #0000ff;
+  --secondary-color: #ffff00;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  filter: sepia(100%) hue-rotate(180deg) !important;
+}
+
+.color-scheme-black-white {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  filter: grayscale(100%) !important;
+}
+
+/* Отключение стилей */
+.disable-styles * {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  letter-spacing: normal !important;
+}
+
+.disable-styles img {
+  display: none !important;
+}
+
+.disable-styles video,
+.disable-styles iframe {
+  display: none !important;
+}
+
+/* Подчеркивание ссылок */
+.underline-links a {
+  text-decoration: underline !important;
+}
+
+/* Отключение анимации */
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Улучшение читаемости для всех элементов */
+button, input, select, textarea {
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+/* Фокус для клавиатурной навигации */
+*:focus {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* Улучшение контраста для текста */
+.high-contrast small,
+.high-contrast .text-muted {
+  color: #000000 !important;
+}
+
+/* Увеличение активных элементов для лучшего взаимодействия */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn {
+  min-height: calc(44px * var(--font-size-multiplier));
+  min-width: calc(44px * var(--font-size-multiplier));
+}
+
+/* Улучшение читаемости таблиц */
+table {
+  border-collapse: separate !important;
+  border-spacing: 2px !important;
+}
+
+th, td {
+  padding: calc(8px * var(--font-size-multiplier)) !important;
+}
+
+/* Readable font */
+.readable-font {
+  font-family: Arial, Verdana, sans-serif !important;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    color: #000000 !important;
+    background-color: #ffffff !important;
+  }
+  
+  a {
+    text-decoration: underline !important;
+    color: #000000 !important;
+  }
+}
+
+/* Navbar styles for high contrast */
+.high-contrast .MuiAppBar-root {
+  background-color: var(--navbar-bg) !important;
+  border-bottom: 2px solid var(--navbar-border) !important;
+}
+
+.high-contrast .MuiAppBar-root * {
+  color: var(--navbar-text) !important;
+}
+
+.high-contrast .MuiToolbar-root {
+  background-color: var(--navbar-bg) !important;
+}
+
+.high-contrast .MuiButton-root {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border-color: var(--button-border) !important;
+}
+
+.high-contrast .MuiButton-root:hover {
+  background-color: var(--hover-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.high-contrast .MuiIconButton-root {
+  color: var(--navbar-text) !important;
+  background-color: transparent !important;
+}
+
+.high-contrast .MuiIconButton-root:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+.high-contrast .MuiDrawer-paper {
+  background-color: var(--navbar-bg) !important;
+  border-right: 2px solid var(--navbar-border) !important;
+}
+
+.high-contrast .MuiListItem-root {
+  border-bottom: 1px solid var(--navbar-border) !important;
+}
+
+.high-contrast .MuiListItem-root:hover {
+  background-color: var(--hover-bg) !important;
+}
+
+.high-contrast .MuiListItemText-primary {
+  color: var(--navbar-text) !important;
+}
+
+.high-contrast .MuiListItemIcon-root {
+  color: var(--navbar-text) !important;
+}
+
+.high-contrast .MuiBadge-badge {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+}
+
+.high-contrast .MuiMenu-paper {
+  background-color: var(--navbar-bg) !important;
+  border: 2px solid var(--navbar-border) !important;
+}
+
+.high-contrast .MuiMenuItem-root {
+  color: var(--navbar-text) !important;
+}
+
+.high-contrast .MuiMenuItem-root:hover {
+  background-color: var(--hover-bg) !important;
+} 
